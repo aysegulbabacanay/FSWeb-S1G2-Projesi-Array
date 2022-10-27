@@ -39,11 +39,18 @@ Aşağıdakileri yapmak için aşağıdaki kopyalama işlevini kullanın:
    2. Alınan dizinin bir kopyasını döndür
 */
 
+//let newDizi = orijinalTatlar.map(function(i){ return i});
+//console.log(newDizi)
 
-function kopyala(/*kod buraya*/){
-  /*kod buraya*/
+function kopyala(i){
+  let newDizi = i.map(function(i)
+  { 
+    return i
+  }
+  );
+  return newDizi
 }
-
+console.log(kopyala(orijinalTatlar))
 
 /* Görev 2:
 Bir dizinin tam olarak 25 çeşit olduğunu onaylayın. İşleviniz şunları kabul etmelidir:
@@ -56,10 +63,26 @@ Bir dizinin tam olarak 25 çeşit olduğunu onaylayın. İşleviniz şunları ka
 */
 
 
-function dizi25Cesitmi(/*kod buraya*/){
-  /*kod buraya*/
+function dizi25Cesitmi(i)
+{
+  let a = i.length;
+if (a==25){
+return true;
+}
+else if (a!=25){
+return false;
 }
 
+}
+console.log(dizi25Cesitmi(orijinalTatlar))
+
+  // let length = orijinalTatlar.length;
+  // if(length==25)
+  // {
+  //   return true
+  // }
+
+//console.log(dizi25Cesitmi(orijinalTatlar))
 
 /* Görev 3:
 Pastane sahibi size yeni bir lezzet fikriyle geldi: Kakule! Bunun da çok tutacağından çok emin. Bu lezzeti eklemek için diziyi değiştirmeniz gerekir.
@@ -74,10 +97,12 @@ Aşağıdakileri yapmak için cesitEkle işlevini kullanın:
 */
 
 
-function cesitEkle(/*kod buraya*/){
-  /*kod buraya*/
+function cesitEkle(x,y)
+{
+ x.unshift(y);
+ return x
 }
-
+console.log(cesitEkle(orijinalTatlar, "Kakule"))
 
 /* Cörev 4:
 
@@ -92,9 +117,14 @@ Aşağıdakileri yapmak için sonCesitiKaldir işlevini kullanın:
 */
 
 
-function sonCesitiKaldir(/*kod buraya*/){
+function sonCesitiKaldir(i)
+{
+  i.pop();
+  return i
+ }
+ console.log(sonCesitiKaldir(orijinalTatlar))
   /*kod buraya*/
-}
+
 
 
 /* Görev 5:
@@ -107,6 +137,8 @@ Aşağıdakileri yapmak için aşağıdaki indekstekiCesitiGetir işlevini kulla
 
    Örneğin: indekstekiCesitiGetir(orijinalTatlar, 2) çalıştırılmasıyla, Kakule'in başarıyla eklendiği varsayarsak sonuç "Ceviz" olucaktır.
 */
+
+
 
 function indekstekiCesitiGetir(/*kod buraya*/){
   /*kod buraya*/
@@ -134,7 +166,6 @@ function ismeGoreCesitCikar(/*kod buraya*/){
 
 
 /* Görev 7:
-
 14 Şubat Sevgililer Günü'nde Firma, tüm çikolata lezzetlerini öne çıkaran bir promosyon malzemeleri oluşturmak istiyor.
 Göreviniz, dizideki her bir öğeyi kontrol eden ve yalnızca verilen isimin geçtiği lezzetleri bulup orataya çıkan yeni diziyi döndüren, ismeGoreFiltrele adlı bir işlev yazmaktır.
 Bu, farklı tatil ve kutlamalarda "Fındık", "Fıstık", "Çikolata" vb. lezzetler için filtreleme yapabilmenizi sağlar.
