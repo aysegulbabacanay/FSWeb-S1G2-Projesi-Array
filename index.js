@@ -140,9 +140,12 @@ Aşağıdakileri yapmak için aşağıdaki indekstekiCesitiGetir işlevini kulla
 
 
 
-function indekstekiCesitiGetir(/*kod buraya*/){
-  /*kod buraya*/
+function indekstekiCesitiGetir(x,y)
+{
+ return x[y]
+
 }
+console.log(indekstekiCesitiGetir(orijinalTatlar, 2))
 
 
 /* Görev 6:
@@ -160,9 +163,14 @@ Aşağıdakileri yapmak için ismeGoreCesitCikar işlevini kullanın:
   İPUCU: Bunun için .splice() kullanabilirsiniz.
 */
 
-function ismeGoreCesitCikar(/*kod buraya*/){
-  /*kod buraya*/
+function ismeGoreCesitCikar(x,y)
+{
+
+x.splice(x.indexOf(y), 1 )
+return x
+
 }
+console.log(ismeGoreCesitCikar(orijinalTatlar, "Tarçın"))
 
 
 /* Görev 7:
